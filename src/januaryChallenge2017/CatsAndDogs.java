@@ -2,7 +2,7 @@ package januaryChallenge2017;
 
 import java.util.Scanner;
 
-public class CatsAndDogs {
+public class CatsAndDogs{
 
 	public static void main(String[] args) {
 
@@ -16,16 +16,19 @@ public class CatsAndDogs {
 			boolean validCount=false;
 			if (l % 4 == 0) {
 				int cat_capacity = d * 2;
-				int dog_legs = d * 4;
+				int dog_legs = d*4;
 
-				if (cat_capacity <= d) {
-					if (l >= dog_legs && l <= ((d * 2 * 4) + dog_legs))
+				if (c <= d*2) {
+				
+					if (l >= dog_legs && l <= ((c * 4) + dog_legs))
+						{//System.out.println("Hi");
 						validCount=true;
+						}
 
 				} else {
+					//System.out.println("ho");
 					int left_cats = c - cat_capacity;
-
-					if (l >= (dog_legs * (left_cats * 4)) && l <= (((d * 2 * 4) + dog_legs) + (left_cats * 4)))
+					if (l >= (dog_legs + (left_cats * 4)) && l <= (dog_legs + c*4))
 						validCount=true;
 				}
 
